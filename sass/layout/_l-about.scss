@@ -1,0 +1,45 @@
+// GO TO ./abstracts/_variables.scss FOR CONFIGURATION
+
+.l-about {
+  padding: var(--distance-top-bottom) var(--distance-left-right);
+
+  @include respond(bp-small) {
+    padding: 0;
+  }
+
+  &__video-container {
+    display: flex;
+
+    margin: 0 auto;
+    border: 1px solid red;
+
+    @include respond(bp-large) {
+      flex-direction: column;
+      text-align: center;
+    }
+    @include respond(bp-small) {
+    }
+  }
+
+  &__text {
+    flex: 0 1 0;
+
+    @include respond(bp-small) {
+      padding: var(--distance-top-bottom) var(--distance-min-left-right);
+    }
+  }
+  &__video {
+    flex: 1;
+    max-width: 640px;
+    height: 480px;
+    background-color: var(--color-highlight);
+    margin-left: var(--distance-min-left-right);
+
+    @include respond(bp-large) {
+      margin: 0;
+    }
+    @include respond(bp-small) {
+      flex: 0 0 25rem;
+    }
+  }
+}
